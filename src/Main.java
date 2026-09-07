@@ -64,29 +64,30 @@ void main() {
     String adgangTilladt = "";
     if (isResidential && isNight)
         adgangTilladt = "FORBUDT";
-    else if ((isCommercial || isMixed) && isLowTraffic)
+    else if (isCommercial || (isMixed && isLowTraffic))
         adgangTilladt = "TILLADT";
     else
         adgangTilladt = "FORBUDT";
 
-    // Trin 11 - Egen tilføjelse til systemet
-
-
     //Bonus
     String visualTrafficLight = "";
 
+    final String GREEN = "\u001B[32m GRØNT LYS: 🟢 \u001B[0m";
+    final String YELLOW = "\u001B[33m GULT LYS: 🟡 \u001B[0m";
+    final String RED = "\u001B[31m RØDT LYS: 🔴 \u001B[0m";
+
     switch (trafficLightColor) {
         case "GRØNT":
-            visualTrafficLight = "[🟢]";
+            visualTrafficLight = GREEN;
             break;
         case "GULT":
-            visualTrafficLight = "[🟡]";
+            visualTrafficLight = YELLOW;
             break;
         case "RØDT":
-            visualTrafficLight = "[🔴]";
+            visualTrafficLight = RED;
             break;
         default:
-            visualTrafficLight = "[🔴]";
+            visualTrafficLight = RED;
             break;
     }
 
@@ -99,7 +100,7 @@ void main() {
     System.out.println("Trafikmængde: " + traffic);
     System.out.println("Områdetype: " + area);
     System.out.println("Nødsituation: " + emergency + "\n");
-    System.out.println("Trafiklys: " + trafficLightColor + " " + visualTrafficLight);
+    System.out.println("Trafiklys: " + visualTrafficLight);
     System.out.println("Adgang: " + adgangTilladt);
     System.out.println("=============================");
 
