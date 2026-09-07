@@ -42,7 +42,7 @@ void main() {
         trafficLightColor = "GRØNT";
     }
     //2. prio
-    else if ((isNight || isCommercial) && isHighTraffic) {
+    else if ((isNight || isResidential) && isHighTraffic) {
         trafficLightColor = "RØDT";
     }
     //3. prio
@@ -108,18 +108,6 @@ void main() {
     // aften i blandet område med høj trafikmængde
 
 
-}
-
-void TestOpgave() {
-    String userType = "admin";
-    int level = 25;
-    if (userType.equalsIgnoreCase("admin")) {
-        System.out.println("Administrator fundet");
-    } else if (level >= 20) {
-        System.out.println("Erfaren spillet fundet");
-    } else {
-        System.out.println("Ny spiller");
-    }
 }
 
 
