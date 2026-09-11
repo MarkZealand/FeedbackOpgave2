@@ -37,7 +37,7 @@ void main() {
     if (isEmergency) {
         trafficLightColor = "GRØNT";
     }
-    //1½. prio (NYLIGT TILFØJET)
+    // TRIN 11. ekstra udvidelse
     else if (isPedestrianButton && isResidential) {
         trafficLightColor = "GRØNT";
     }
@@ -91,7 +91,6 @@ void main() {
             break;
     }
 
-
     // Trin 8
     System.out.println("=============================");
     System.out.println("========TRAFIKCENTRAL========");
@@ -103,11 +102,6 @@ void main() {
     System.out.println("Trafiklys: " + visualTrafficLight);
     System.out.println("Adgang: " + adgangTilladt);
     System.out.println("=============================");
-
-    // Trin 9
-    // dag i blandet område med lav trafikmængde
-    // aften i blandet område med høj trafikmængde
-
 
 }
 
